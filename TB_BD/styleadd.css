@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Warna hijau muda yang lembut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #81c784;
+    margin: 10px auto 0;
+    transition: width 0.3s ease;
+}
+
+h2:hover::after {
+    width: 100px;
+}
+
+form {
+    background: linear-gradient(to bottom, #ffffff, #f1f8e9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #555;
+}
+
+input[type="text"],
+select,
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #81c784; /* Warna hijau lembut */
+    box-shadow: 0 0 8px rgba(129, 199, 132, 0.3);
+}
+
+input[type="submit"] {
+    background-color: #81c784; /* Warna hijau lembut */
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #66bb6a; /* Warna hijau lebih tua */
+    transform: scale(1.05);
+}
+
+a {
+    color: #81c784; /* Warna hijau lembut */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #66bb6a; /* Warna hijau lebih tua */
+}
